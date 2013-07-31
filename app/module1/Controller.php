@@ -5,17 +5,9 @@ use \BaseController;
 use \Template;
 
 class Controller extends BaseController {
-	function index($app){
-		echo Template::instance()->render("default.html");
-	}
+	function index($app){}
 
-	function page1($app){
-		echo Template::instance()->render("page1.html");
+	function page1($app){}
 
-	}
-
-	function page2($app){
-		echo Template::instance()->render("page2.html");
-
-	}
+	function page2($app){}
 }
