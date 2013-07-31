@@ -1,8 +1,2 @@
 .idea
-old
-config.ini
 tmp/*
-/theme/*
-!/theme/light/
-!/theme/bootstrap/
-core/user_config.php
