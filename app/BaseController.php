@@ -1,10 +1,18 @@
 <?php
 
 class BaseController {
+	protected $app;
+
 	function __construct(){
-		$app = Base::instance();
-		$param = $app->get('PARAMS');
+		$this->app = Base::instance();
+		$param = $this->app->get('PARAMS');
 		$module = empty($param['module'])?'landing':$param['module'];
-		$app->concat('UI',';app/'.$module.'/views/');
+		$this->app->concat('UI',';app/'.$module.'/views/');
+	}
+
+	function afterroute(){
+		$param = $this->app->get('PARAMS');
+		$action = empty($param['action'])?'index':$param['action'];
+		echo Template::instance()->render($action.".html");
 	}
 }
