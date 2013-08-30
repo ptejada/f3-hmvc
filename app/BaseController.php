@@ -8,6 +8,7 @@ class BaseController {
 		$param = $this->app->get('PARAMS');
 		$module = empty($param['module'])?'landing':$param['module'];
 		$this->app->concat('UI',';app/'.$module.'/views/');
+		$this->app->set('LOCALES', 'app/' . $module . '/dict/'); // load module dictionary
 	}
 
 	function afterroute(){
