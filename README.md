@@ -1,8 +1,9 @@
 A [FatFreeFramework(f3)](http://fatfreeframework.com/) HMVC template
 =======
 
-When you clone this repo make sure to run this command to fetch the f3 framework:
+When you clone this repo make sure to run this commands to initialize and fetch the f3 framework:
 ```
+git submodule init
 git submodule update
 ```
 
