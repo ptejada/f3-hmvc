@@ -1,0 +1,3 @@
+[submodule "core/f3"]
+	path = core/f3
+	url = https://github.com/bcosca/fatfree.git
