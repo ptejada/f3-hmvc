@@ -10,5 +10,4 @@ class Controller extends BaseController {
 	function page1($app){}
 
 	function page2($app){}
-	//function ajax($app){}
 }

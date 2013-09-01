@@ -12,22 +12,6 @@ class BaseController {
 		$module = $module ? $module : $this->app->get("DefaultModule");
 		$this->app->concat('UI',';app/'.$module.'/views/');
 		$this->app->set('LOCALES', 'app/' . $module . '/dict/'); // load module dictionary
-
-		/*
-		$action = $this->app->get("PARAMS.action");
-		$control = $this->app->get("PARAMS.controller");
-
-		echo $action;
-
-		if(!$control && method_exists($this, $action)){
-			$this->app->set("PARAMS.action", $action);
-			$this->$action($this->app, $this->app->get("PARAMS"));
-		}else{
-			$module = $this->app->get("PARAMS.module");
-			$this->app->call("$module\\controllers\\{$action}->index", $this->app, $this->app->get("PARAMS"));
-
-		}
-		*/
 	}
 
 	function afterroute(){
