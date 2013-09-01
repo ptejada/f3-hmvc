@@ -1,10 +1,8 @@
 <?php
 
-namespace module2;
-use \BaseController;
-use \Template;
+namespace module2\controllers;
 
-class Controller extends BaseController {
+class Controller extends \BaseController {
 	function index($app){
 		//Model from module1
 		$app->set("data", new \module1\models\Data());
