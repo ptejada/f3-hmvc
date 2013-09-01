@@ -1,12 +1,13 @@
 <?php
 
 class BaseController {
+	/** @var \Base */
 	protected $app;
 
 	function __construct(){
 		$this->app = Base::instance();
-		$param = $this->app->get('PARAMS');
-		$module = empty($param['module'])?'landing':$param['module'];
+		$module = $this->app->get("PARAMS.module");
+		$module = $module ? $module : $this->app->get("DefaultModule");
 		$this->app->concat('UI',';app/'.$module.'/views/');
 		$this->app->set('LOCALES', 'app/' . $module . '/dict/'); // load module dictionary
 	}
