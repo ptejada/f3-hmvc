@@ -1,15 +1,25 @@
 <?php
 
 /** @var $app Base */
-$app = require('lib/base.php');
+$app = require('core/f3/lib/base.php');
 
-$app->config('config.ini');
+/*
+ * Load required configurations
+ */
+$app->config('core/config.ini');
+
+/*
+ * Load user defined configurations if exists
+ */
+if(file_exists("config.ini"))
+	$app->config('config.ini');
 
 /*
  * Setup the DefaultModule route
  */
 $DefaultModule = $app->get("DefaultModule");
-$app->route("GET /", "\\$DefaultModule\\Controller->index");
+$app->route("GET /", "\\$DefaultModule\\controllers\\Controller->index");
+//$app->route("GET /@action", "\\$DefaultModule\\controllers\\Controller->@action");
 
 
 /*
