@@ -1,7 +1,7 @@
 A [FatFreeFramework(f3)](http://fatfreeframework.com/) HMVC template
 =======
 
-When you clone this repo make sure to run this commands to initialize and fetch the f3 framework:
+When you clone this repo make sure to run these commands to initialize and fetch the f3 framework:
 ```
 git submodule init
 git submodule update
@@ -91,7 +91,7 @@ Lets assume this repo is sitting at the root of localhost `http://localhost/`. T
 	</tbody>
 </table>
 
-To add your own f3 configuration and routes add a `config.ini` file in the the root. The only configuration option this template uses is `DefaultModule`. As the name implies this option will set the default module. For example if you want to use a module called `landing` as the default module the `config.ini` file should include:
+To add your own f3 configuration and routes add a `config.ini` file in the root. The only configuration option this template uses is `DefaultModule`. As the name implies this option will set the default module. For example if you want to use a module called `landing` as the default module the `config.ini` file should include:
 
 ```
 [globals]
